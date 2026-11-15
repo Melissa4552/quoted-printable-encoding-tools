@@ -42,3 +42,10 @@ to have escaped correctly and treats every escaped byte literally.
 - `decode(text)` — decodes quoted-printable ASCII to a UTF-8 string.
 - `encodeToBytes(bytes)` — encodes a `Uint8Array` without a string round trip.
 - `decodeFromBytes(text)` — decodes to a `Uint8Array` without assuming UTF-8.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
