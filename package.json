@@ -1,6 +1,6 @@
 {
   "name": "quoted-printable-encoding-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Converts text with non-ASCII characters to and from 7-bit ASCII using RFC 2045.",
   "type": "module",
   "main": "src/index.js",
